@@ -5,6 +5,7 @@ This project allows multiple devices connected to the same Wi-Fi network to chat
 
 Why?
 so i can chat with friends even when i shouldnt be able to :>
+(using portable wifi)
 
  Features
 - Real-time messaging
