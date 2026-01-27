@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Chat</title>
+</head>
+<body>
+  <h2>Offline Wi-Fi Chat</h2>
+
+  <input id="msg" placeholder="Type message">
+  <button onclick="send()">Send</button>
+
+  <ul id="chat"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const chat = document.getElementById("chat");
+
+    function send() {
+      const msg = document.getElementById("msg").value;
+      socket.emit("message", msg);
+      document.getElementById("msg").value = "";
+    }
+
+    socket.on("message", (msg) => {
+      const li = document.createElement("li");
+      li.innerText = msg;
+      chat.appendChild(li);
+    });
+  </script>
+</body>
+</html>
