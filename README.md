@@ -3,6 +3,9 @@ A real-time offline chat application using Node.js, Express, and Socket.IO over 
 
 This project allows multiple devices connected to the same Wi-Fi network to chat with each other in real time. It was built to understand **networking, client–server communication, and WebSockets**.
 
+Why?
+so i can chat with friends even when i shouldnt be able to :>
+
  Features
 - Real-time messaging
 - Works completely offline (LAN only)
