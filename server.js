@@ -12,11 +12,12 @@ app.use(express.static("public"));
 io.on("connection", (socket) => {
   console.log("User connected");
 
-  socket.on("message", (msg) => {
-    io.emit("message", msg);
+  socket.on("message", (data) => {
+    io.emit("message", data);
   });
 });
 
 server.listen(3000, () => {
   console.log("Chat running on port 3000");
+
 });
